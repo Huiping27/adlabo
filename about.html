@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f4f4f4; /* Added light gray background color */
+            background-color: #f4f4f4; /* Light gray background color */
         }
 
         header {
@@ -70,57 +70,99 @@
             padding: 20px;
             text-align: center;
         }
+
+        #language-selector {
+            margin: 20px;
+            text-align: center;
+        }
+
+        #language-selector button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Agency Name</h1>
+        <h1 data-lang="en">Agency Name</h1>
+        <h1 data-lang="de" style="display:none;">Agenturname</h1>
+        <h1 data-lang="zh" style="display:none;">机构名称</h1>
         <nav>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Our Services</a>
-            <a href="projects.html">Our Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="about.html" data-lang="en">About Us</a>
+            <a href="about.html" data-lang="de" style="display:none;">Über Uns</a>
+            <a href="about.html" data-lang="zh" style="display:none;">关于我们</a>
+            <a href="services.html" data-lang="en">Our Services</a>
+            <a href="services.html" data-lang="de" style="display:none;">Unsere Dienstleistungen</a>
+            <a href="services.html" data-lang="zh" style="display:none;">我们的服务</a>
+            <a href="projects.html" data-lang="en">Our Projects</a>
+            <a href="projects.html" data-lang="de" style="display:none;">Unsere Projekte</a>
+            <a href="projects.html" data-lang="zh" style="display:none;">我们的项目</a>
+            <a href="contact.html" data-lang="en">Contact</a>
+            <a href="contact.html" data-lang="de" style="display:none;">Kontakt</a>
+            <a href="contact.html" data-lang="zh" style="display:none;">联系我们</a>
         </nav>
     </header>
 
+    <div id="language-selector">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('de')">Deutsch</button>
+        <button onclick="changeLanguage('zh')">中文</button>
+    </div>
+
     <div class="service-banner">
-        <p>Placeholder for service-related text.</p>
+        <p data-lang="en">Placeholder for service-related text.</p>
+        <p data-lang="de" style="display:none;">Platzhalter für servicerelevanten Text.</p>
+        <p data-lang="zh" style="display:none;">服务相关文字的占位符。</p>
     </div>
 
     <section class="services-section">
-        <h2>Our Services</h2>
-        <p>Placeholder for introduction text to our services.</p>
+        <h2 data-lang="en">Our Services</h2>
+        <h2 data-lang="de" style="display:none;">Unsere Dienstleistungen</h2>
+        <h2 data-lang="zh" style="display:none;">我们的服务</h2>
+        <p data-lang="en">Placeholder for introduction text to our services.</p>
+        <p data-lang="de" style="display:none;">Platzhalter für Einführungstext zu unseren Dienstleistungen.</p>
+        <p data-lang="zh" style="display:none;">我们的服务介绍文字占位符。</p>
 
         <div class="service-card">
-            <h3>Branding</h3>
+            <h3 data-lang="en">Branding</h3>
+            <h3 data-lang="de" style="display:none;">Markenbildung</h3>
+            <h3 data-lang="zh" style="display:none;">品牌塑造</h3>
             <img src="placeholder-image.jpg" alt="Branding service">
-            <p>Placeholder description of branding service.</p>
+            <p data-lang="en">Placeholder description of branding service.</p>
+            <p data-lang="de" style="display:none;">Platzhalter Beschreibung der Markenbildung.</p>
+            <p data-lang="zh" style="display:none;">品牌服务的占位描述。</p>
         </div>
 
         <div class="service-card">
-            <h3>Web Design</h3>
+            <h3 data-lang="en">Web Design</h3>
+            <h3 data-lang="de" style="display:none;">Webdesign</h3>
+            <h3 data-lang="zh" style="display:none">网页设计</h3>
             <img src="placeholder-image.jpg" alt="Web Design service">
-            <p>Placeholder description of web design service.</p>
+            <p data-lang="en">Placeholder description of web design service.</p>
+            <p data-lang="de" style="display:none;">Platzhalter Beschreibung des Webdesigns.</p>
+            <p data-lang="zh" style="display:none;">网页设计服务的占位描述。</p>
         </div>
 
-        <div class="service-card">
-            <h3>Advertising</h3>
-            <img src="placeholder-image.jpg" alt="Advertising service">
-            <p>Placeholder description of advertising service.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Packaging</h3>
-            <img src="placeholder-image.jpg" alt="Packaging service">
-            <p>Placeholder description of packaging service.</p>
-        </div>
+        <!-- Add more service cards as needed -->
     </section>
 
     <footer>
-        <p>&copy; 2024 Agency Name. All Rights Reserved.</p>
+        <p data-lang="en">&copy; 2024 Agency Name. All Rights Reserved.</p>
+        <p data-lang="de" style="display:none;">&copy; 2024 Agenturname. Alle Rechte vorbehalten.</p>
+        <p data-lang="zh" style="display:none;">&copy; 2024 机构名称。版权所有。</p>
     </footer>
 
+    <script>
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => el.style.display = 'none');
+            const selectedLang = document.querySelectorAll(`[data-lang="${lang}"]`);
+            selectedLang.forEach(el => el.style.display = 'block');
+        }
+    </script>
 </body>
 </html>
 
