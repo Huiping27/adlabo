@@ -1,9 +1,9 @@
-hi- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agency Website</title>
+    <title>Our Services | Agency Name</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -11,6 +11,7 @@ hi- <!DOCTYPE html>
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f4f4f4; /* Added light gray background color */
         }
 
         header {
@@ -32,27 +33,35 @@ hi- <!DOCTYPE html>
             font-weight: bold;
         }
 
-        .banner {
+        .service-banner {
             height: 400px;
-            background: #ccc url('placeholder-banner.jpg') center/cover no-repeat;
+            background-color: #f1f1f1; /* Light gray for service banner */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+            color: #333;
             font-size: 2em;
         }
 
-        .section {
+        .services-section {
             padding: 50px 20px;
             text-align: center;
         }
 
-        .section img {
+        .service-card {
+            display: inline-block;
+            width: 45%;
+            margin: 20px;
+            background-color: #ffffff; /* White background for the cards */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .service-card img {
             width: 100%;
-            max-width: 600px;
             height: auto;
-            margin: 20px 0;
+            border-radius: 8px;
         }
 
         footer {
@@ -64,33 +73,53 @@ hi- <!DOCTYPE html>
     </style>
 </head>
 <body>
+
     <header>
         <h1>Agency Name</h1>
         <nav>
             <a href="about.html">About Us</a>
             <a href="services.html">Our Services</a>
-            <a href="google-ads.html">Google Ads</a>
-            <a href="social-media-ads.html">Social Media Ads</a>
-            <a href="german-market-entry.html">German Market Entry</a>
-            <a href="blog.html">Blog</a>
-            <a href="careers.html">Careers</a>
+            <a href="projects.html">Our Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <div class="banner">
-        <p>Placeholder for Banner Text</p>
+    <div class="service-banner">
+        <p>Placeholder for service-related text.</p>
     </div>
 
-    <section id="services" class="section">
-        <h2>Welcome to Our Agency</h2>
-        <p>Explore our services and learn how we can help your business grow.</p>
-        <img src="placeholder-main.jpg" alt="Main Placeholder">
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <p>Placeholder for introduction text to our services.</p>
+
+        <div class="service-card">
+            <h3>Branding</h3>
+            <img src="placeholder-image.jpg" alt="Branding service">
+            <p>Placeholder description of branding service.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Web Design</h3>
+            <img src="placeholder-image.jpg" alt="Web Design service">
+            <p>Placeholder description of web design service.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Advertising</h3>
+            <img src="placeholder-image.jpg" alt="Advertising service">
+            <p>Placeholder description of advertising service.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Packaging</h3>
+            <img src="placeholder-image.jpg" alt="Packaging service">
+            <p>Placeholder description of packaging service.</p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Agency Name. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
-
